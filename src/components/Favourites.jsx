@@ -6,7 +6,7 @@ import {
   clearFavourites,
   getFavouritesFromSource,
 } from "../store/favouritesSlice";
-import CountrySingle from "./CountrySingle";
+import CountryCard from "./CountryCard";
 
 // Favourites to be written
 const Favourites = () => {
@@ -77,7 +77,7 @@ const Favourites = () => {
               .includes(search.toLowerCase());
           })
           .map((country) => (
-            <CountrySingle key={country.name.common} country={country} />
+            <CountryCard key={country.name.common} country={country} />
           ))}
       </Row>
     </Container>
